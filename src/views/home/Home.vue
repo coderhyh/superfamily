@@ -6,7 +6,6 @@
       </template>
       <template #center>
         <div class="nav-bar-center">装馨家</div>
-        <div class="nav-bar-center">装馨家</div>
       </template>
     </nav-bar>
   
