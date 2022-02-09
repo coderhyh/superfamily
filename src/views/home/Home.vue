@@ -41,7 +41,7 @@
     </Scroll>
   </div>
 </template>
-
+ 
 <script>
 import NavBar from "components/common/navbar/NavBar";
 import HomeHander from "./homeChild/HomeHander";
