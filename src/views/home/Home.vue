@@ -8,7 +8,7 @@
         <div class="nav-bar-center">装馨家</div>
       </template>
     </nav-bar>
- 
+  
     <TabControl
       class="abControl"
       :titles="controlList"
