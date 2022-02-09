@@ -1,30 +1,57 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <keep-alive exclude="Detail,SearchView,Feedback">
+      <component :is="Component" />
+    </keep-alive>
+  </router-view>
+  <City></City>
+  <!-- <transition name="slide">
+        </transition> -->
+
+  <!-- <MainTabBar v-if="$route.meta.showTab"></MainTabBar> -->
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import MainTabBar from "components/contents/mainTabBar/MainTabBar.vue";
+import City from "components/contents/city/City.vue";
+
+export default {
+  name: "app",
+  data() {
+    return {};
+  },
+  components: {
+    MainTabBar,
+    City
+  },
+  mounted() {},
+  methods: {},
+};
+</script>
+
+<style lang="less">
+@import url("~assets/less/base.css");
+@import url("~assets/imgs/font-icon/iconfont.css");
+.slide-enter-from {
+  transform: translateX(100%);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
 }
 
-#nav {
-  padding: 30px;
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 1s;
 }
+// .swiper-container {
+//   .swiper-pagination {
+//     .swiper-pagination-bullet-active {
+//       background: pink !important;
+//     }
+//   }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+//   .swiper-img {
+//     width: 100vw;
+//   }
+// }
 </style>

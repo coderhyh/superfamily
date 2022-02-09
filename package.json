@@ -7,7 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "better-scroll": "^2.4.2",
     "core-js": "^3.6.5",
+    "panolens": "^0.12.1",
+    "vant": "^3.4.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -17,6 +20,9 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0"
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-plugin-import": "^1.13.3",
+    "less": "^3.13.1",
+    "less-loader": "^6.0.0"
   }
 }
